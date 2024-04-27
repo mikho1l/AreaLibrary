@@ -1,0 +1,7 @@
+--Продукты (Products) и Категории (Categories). По условию задачи связь N:N. Предположим, что наша БД спроектирована по 3 нормальной
+--форме => есть таблица-связка ProductCategory(ProductId, CategoryId).
+
+SELECT p.Name, c.Name
+FROM
+Products p LEFT JOIN ProductCategory pc on p.Id = pc.ProductId
+LEFT JOIN Categories c on c.Id = pc.CategoryId
